@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="">
+        <h1 align="center">Payment Form</h1>
+        
+        <hr>
+
+        <h2>User Details</h2>
+        <p>Name :
+            <input type="text" name="name", required>
+        </p>
+        <fieldset>
+            <legend >Gender</legend>
+            <p >
+                Male <input type="radio" name="gender" required>
+                Female <input type="radio" name="gender" required>
+            </p>
+        </fieldset>
+        <p>Address : <textarea name="address" id="address" cols="75" rows="3" required></textarea></p>
+        <p>Pin Code : <input type="number" name="pincode" id="pincode" required></p>
+        <p>Email : <input type="email" name="email" id="email" required></p>
+
+        <hr>
+
+        <h2>Payment Details</h2>
+        <p>Card Type :
+            <select name="card_type" id="card_type" required>
+                <option value="">Select Card</option>
+                <option value="visa">Visa</option>
+                <option value="rupay">Rupay</option>
+                <option value="master_card">Master Card</option>
+            </select>
+        </p>
+
+        <p>Card Number : <input type="number" name="card_number" id="card_number" required></p>
+        <p>Expiration Date : <input type="date" name="expiration_date" id="expiration_date" required></p>
+        <p>CVV : <input type="password" name="cvv" id="cvv" required>
+            <input type="checkbox" onclick="myFunction()">Show Password
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("cvv");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+        </p>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
